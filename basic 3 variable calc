@@ -1,0 +1,13 @@
+puts "This will be a simple math calculator to add, sub, mult, and div.."
+puts "Please enter a number.."
+gets stdin {number_entered}
+puts "Please enter a mathematical fuction..\
+        \n+ to add\
+        \n- to subtract\
+        \n* to multiply\
+        \n/ to divide"
+gets stdin {math_function}
+puts "Please enter a 2nd number.."
+gets stdin {second_number}
+set {result} [expr $number_entered $math_function $second_number];
+puts "This is your result: $result"
