@@ -1,6 +1,6 @@
 #
 # This is my first TCL script
-# Here I decided to write some form of a functioning calculator ar first
+# Here I decided to write some form of a functioning calculator at first
 # The first script is my interpretation of a basic calculator as I was reading and learning how to program TCL
 # So while it does function, it is certainly not the most efficient, in fact
 # It is a bit unecessarily complex for what it has to do, but
