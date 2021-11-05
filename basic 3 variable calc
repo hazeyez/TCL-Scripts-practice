@@ -1,3 +1,21 @@
+#
+# This is my first TCL script
+# Here I decided to write some form of a functioning calculator ar first
+# The first script is my interpretation of a basic calculator as I was reading and learning how to program TCL
+# So while it does function, it is certainly not the most efficient, in fact
+# It is a bit unecessarily complex for what it has to do, but
+# Again, my first interpretation as I read about how to script TCL.
+# SO, overall not bad. I impressed myself. However, it is quite limited and overkill for the result. 
+# As I continued to read, I learned that there are more simplistic ways to script it to receive the same or a better result.
+# THAT IS WHERE THE SECOND CALCULATOR COMES IN!
+
+
+# ********* CALCULATOR #1 *********
+# This is my first interpretation of a TCL calculator script. 
+# It requests 3 inputs from the user (2 numbers and 1 math function) then sets them as variables
+# Then pulls all 3 variables together to run in a calculation. 
+# Unfortunately, it is limited to only 2 numbers and 1 math function (which is limited to 4 different functions)
+
 puts "This will be a simple math calculator to add, sub, mult, and div.."
 puts "Please enter a number.."
 gets stdin {number_entered}
@@ -11,3 +29,24 @@ puts "Please enter a 2nd number.."
 gets stdin {second_number}
 set {result} [expr $number_entered $math_function $second_number];
 puts "This is your result: $result"
+
+##########################################################################
+##########################################################################
+##################### My second calculator is below ######################
+##########################################################################
+##########################################################################
+
+# In this calculator, you see that it is a smaller amount of script,
+# yet it is a more complex calculator which offers many number inputs,
+# as well as many math functions, plus all math functions that TCL is capable of
+# simply by letting the user input the whole equation, then
+# allowing the script to run the whole equation with the "expr" command
+
+puts "Enter an equation"
+gets stdin {equation}
+set {result2} [expr $equation];
+puts "This is your answer: $result2"
+
+
+
+
