@@ -1,0 +1,22 @@
+# Quote file (relative to eggdrop)
+set qfile "scripts/quotes.txt"
+ 
+# Delay between quotes (in minutes)
+set qdelay 30
+ 
+# Chan where quotes are displayed
+set qchan "#lamest"
+ 
+### DO NOT EDIT BELOW
+set quotes {}
+proc qinit {} {
+	set qf [open $::qfile r]
+	set qd [read -nonewline $qf]
+	close $qf
+	set ::quotes [split $qd "\n"]
+	set qt [list [timer $::qdelay qpub 0]]
+}
+qinit
+proc qpub {} {
+	putserv "PRIVMSG $::qchan :[lindex $::quotes [rand [llength $::quotes]]]"
+}
